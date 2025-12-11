@@ -1,0 +1,16 @@
+
+# Byte-compiled / env
+__pycache__/
+.env
+.venv/
+venv/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite dev DB
+dev.db
+
+# Docker
+*.log
+docker-compose.override.yml
