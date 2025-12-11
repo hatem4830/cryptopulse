@@ -4,5 +4,5 @@ uvicorn[standard]==0.22.0
 httpx==0.24.1
 sqlmodel==0.0.8
 python-dotenv==1.0.1
-psycopg2-binary==2.9.7
+psycopg[binary]==3.2.10
 aiodns==3.0.0
