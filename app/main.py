@@ -334,7 +334,7 @@ if __name__ == "__main__":
             stop_event = asyncio.Event()
             worker_task = asyncio.create_task(subscription_and_alert_worker(stop_event))
             async with httpx.AsyncClient(timeout=45.0) as client:
-                nonlocal OFFSET  # type: ignore
+                global OFFSET  # type: ignore
                 while True:
                     try:
                         resp = await client.get(f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/getUpdates", params={"timeout": 30, "offset": OFFSET + 1})
