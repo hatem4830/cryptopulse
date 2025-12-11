@@ -1,0 +1,16 @@
+
+[Unit]
+Description=Telegram Crypto Price Bot
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/telegram-crypto-bot
+EnvironmentFile=/opt/telegram-crypto-bot/.env
+ExecStart=/usr/bin/python3 -m app.main --webhook
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
